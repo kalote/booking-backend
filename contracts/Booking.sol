@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0
 
-pragma solidity >=0.7.0 <0.9.0;
+pragma solidity >=0.4.22 <0.9.0;
 
 contract Booking {
-    uint roomCount = 0;
+    uint public roomCount = 0;
     
     struct Room {
         uint id;
@@ -22,7 +22,7 @@ contract Booking {
     
     mapping (uint => Room) public rooms;
     
-    constructor() {
+    constructor () public {
         for (uint i=0; i < 10; i++) {
             createRoom("COKE");
         }
