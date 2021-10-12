@@ -30,7 +30,7 @@ contract Booking {
 
     function book(uint256 _id, uint256 _time) public {
         Room memory _room = rooms[_id];
-        _room.booked = !_room.booked;
+        _room.booked = true;
         _room.bookedBy = msg.sender;
         _room.bookedAt = _time;
         rooms[_id] = _room;
